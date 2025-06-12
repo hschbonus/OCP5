@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Accueil from './pages/Accueil.jsx'
+import Apropos from './pages/Apropos.jsx'
+import Logement from './pages/Logement.jsx'
+import Error from './pages/Error.jsx'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          le count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+import './style/main.scss'
 
-export default App
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/pages/Accueil" element={<Accueil />} />
+        <Route path="/pages/Apropos" element={<Apropos />} />
+        <Route path="/pages/Logement" element={<Logement />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+      <Footer />
+    </Router>
+  </StrictMode>,
+)

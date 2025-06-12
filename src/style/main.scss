@@ -1,0 +1,25 @@
+@use 'components/header';
+@use 'components/footer';
+
+@use 'pages/error';
+@use 'pages/accueil';
+@use 'pages/apropos';
+@use 'pages/logement';
+
+@use './variables';
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    .root {
+        font-family: variables.$main-font;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 50px;
+        padding-top: 50px;
+    }
+}
