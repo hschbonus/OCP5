@@ -1,0 +1,11 @@
+@use "../variables.scss";
+
+.accueil {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include variables.max1440-center;
+    
+}
+

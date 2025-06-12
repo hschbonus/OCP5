@@ -1,4 +1,6 @@
 import { useEffect } from "react"
+import imgfond1 from '../assets/imgfond1.png'
+import ImgEntete from "../components/Img-entete";
 
 function Accueil() {
 
@@ -8,7 +10,12 @@ function Accueil() {
   , []);
 
   return (
-    <h1>Bienvenue sur la page d'Accueil</h1>
+    <section className="accueil">
+      <ImgEntete
+        src={imgfond1}
+        alt="Image de falaises par temps brumeux"
+      />
+    </section>
   )
 }
 

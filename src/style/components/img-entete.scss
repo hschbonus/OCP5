@@ -1,0 +1,22 @@
+@use "../variables.scss";
+
+.img-entete {
+    width: 100%;
+    position: relative;
+
+    img {
+        @include variables.img-cut-desktop;
+        @include variables.img-shadow;
+        height: variables.$haut-img;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+    }
+
+    .background-img {
+        @include variables.img-cut-desktop;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: variables.$haut-img;
+    }
+
+}

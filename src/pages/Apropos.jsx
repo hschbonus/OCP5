@@ -1,7 +1,22 @@
+import { useEffect } from "react"
+import imgfond2 from '../assets/imgfond2.png'
+import ImgEntete from "../components/Img-entete";
+
 
 function Apropos() {
+
+  useEffect(() => {
+    document.title = "Kasa - A propos";
+  }
+  , []);
+
   return (
-    <h1>Bienvenue sur la page d'Apropos</h1>
+    <section className="apropos">
+      <ImgEntete
+        src={imgfond2}
+        alt="Paysage de montagnes et forêt"
+      />
+    </section>
   )
 }
 

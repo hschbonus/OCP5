@@ -8,10 +8,8 @@ header {
         @include variables.flex-between-center;
         gap: 57px;
         a {
-            font-size: 24px;
-            font-weight: 500;
+            @include variables.size-24-500;
             text-decoration: none;
-            height: 100%;
             &:visited {
                 color: #000;
             }

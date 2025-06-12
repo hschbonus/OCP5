@@ -1,5 +1,6 @@
 @use 'components/header';
 @use 'components/footer';
+@use 'components/img-entete';
 
 @use 'pages/error';
 @use 'pages/accueil';
@@ -22,4 +23,8 @@ body {
         gap: 50px;
         padding-top: 50px;
     }
+}
+
+.souligné {
+    text-decoration: underline;
 }
