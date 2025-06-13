@@ -17,7 +17,7 @@ function Header() {
                 <Link className={isAccueil || isDefault ? 'souligné' : ''} 
                     to="/pages/Accueil">Accueil</Link>
                 <Link className={isApropos ? 'souligné' : ''} 
-                    to="/pages/Apropos">A propos</Link>
+                    to="/pages/Apropos">A Propos</Link>
             </nav>
         </header>
     )   

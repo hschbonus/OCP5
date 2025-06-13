@@ -1,0 +1,10 @@
+@use "../variables.scss";
+
+.card-content {
+    background-color: variables.$main-color;
+    width: variables.$card-width;
+    height: variables.$card-height;
+    border-radius: 10px;
+    
+}
+

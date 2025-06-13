@@ -2,6 +2,8 @@ $max-width-desktop: 1440px;
 $main-color: #FF6060;
 $main-font: 'Montserrat', sans-serif;
 $haut-img: 223px;
+$card-height: 340px;
+$card-width: 340px;
 
 @mixin flex-between-center {
     display: flex;

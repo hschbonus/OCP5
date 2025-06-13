@@ -13,8 +13,9 @@ function Apropos() {
   return (
     <section className="apropos">
       <ImgEntete
-        src={imgfond2}
-        alt="Paysage de montagnes et forêt"
+        imgEnteteSrc={imgfond2}
+        imgEnteteAlt="Paysage de montagnes et forêt"
+        overlayOpacity={0.3}
       />
     </section>
   )

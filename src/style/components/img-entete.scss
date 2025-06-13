@@ -3,6 +3,8 @@
 .img-entete {
     width: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
 
     img {
         @include variables.img-cut-desktop;
@@ -15,8 +17,25 @@
 
     .background-img {
         @include variables.img-cut-desktop;
-        background-color: rgba(0, 0, 0, 0.5);
         height: variables.$haut-img;
     }
 
+    h1 {
+        font-size: 48px;
+        font-weight: 700;
+        position: absolute;
+        align-self: center;
+        margin: 0;
+        color: white;
+        padding: 0 16px;  
+        
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px  1px 0 #000,
+            1px  1px 0 #000;
+    }
+
+
 }
+
