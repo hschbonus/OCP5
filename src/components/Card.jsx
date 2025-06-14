@@ -7,10 +7,7 @@ function Card ({cardTitle, cardImg}) {
                 src= {cardImg}
                 alt= ''
             />
-            <h2>
-                {cardTitle}
-            </h2>
-            
+            <h2>{cardTitle}</h2>
         </div>
     )
 

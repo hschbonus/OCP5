@@ -5,8 +5,8 @@ import kasaLogoDesk from '../assets/kasa-logo-desktop.png'
 function Header() {
     const location = useLocation();
     const isDefault = location.pathname === '/';
-    const isAccueil = location.pathname === '/pages/Accueil';
-    const isApropos = location.pathname === '/pages/Apropos';
+    const isAccueil = location.pathname === '/Accueil';
+    const isApropos = location.pathname === '/Apropos';
 
     return (
         <header>
@@ -15,9 +15,9 @@ function Header() {
             </Link>
             <nav>
                 <Link className={isAccueil || isDefault ? 'souligné' : ''} 
-                    to="/pages/Accueil">Accueil</Link>
+                    to="/Accueil">Accueil</Link>
                 <Link className={isApropos ? 'souligné' : ''} 
-                    to="/pages/Apropos">A Propos</Link>
+                    to="/Apropos">A Propos</Link>
             </nav>
         </header>
     )   

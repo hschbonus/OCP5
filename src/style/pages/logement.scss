@@ -1,0 +1,54 @@
+@use "../variables.scss";
+
+.logement-wrapper {
+    @include variables.max1440-center;
+    @include variables.flex-between-center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logement-info1 {
+    @include variables.max1440-center;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        @include variables.size-36-500;
+        color: variables.$main-color;
+        margin: 0;
+    }
+
+    p {
+        @include variables.size-18-500;
+        margin: 0;
+        padding-top: 10px;
+        
+    }
+
+}
+
+.logement-tags {
+    display: flex;
+    gap: 10px;
+
+    .logement-tag {
+        @include variables.size-14-700;
+        background-color: variables.$main-color;
+        color: white;
+        border-radius: 10px;
+        height: 25px;
+        padding: 0 20px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.logement-info2 {
+    @include variables.max1440-center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}

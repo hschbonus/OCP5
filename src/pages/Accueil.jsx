@@ -1,12 +1,11 @@
 import { useEffect } from "react"
+import { Link } from 'react-router-dom'
 import imgfond1 from '../assets/imgfond1.png'
 import ImgEntete from "../components/Img-entete";
 import Card from "../components/Card";
 import listeLogements from '../liste-logements.json';
 
 function Accueil() {
-  // const listeLogements = data?.listeLogements;
-
 
   useEffect(() => {
     document.title = "Kasa - Accueil";
@@ -23,12 +22,17 @@ function Accueil() {
       />
       <div className="card-wrapper">
         {listeLogements.map((logement) => (
-          <Card
+          <Link
+            to={`/Logement/${logement.id}`}
             key={logement.id}
-            cardTitle={logement.title}
-            cardImg={logement.cover}
-            id={logement.id}
-          />
+            >
+            <Card
+              // key={logement.id}
+              cardTitle={logement.title}
+              cardImg={logement.cover}
+              id={logement.id}
+            />
+          </Link>
         ))}
         
 

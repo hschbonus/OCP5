@@ -23,6 +23,16 @@ $card-width: 340px;
     font-weight: 500;
 }
 
+@mixin size-36-500 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+@mixin size-18-500 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
 @mixin size-14-500 {
     font-size: 14px;
     font-weight: 500;
@@ -35,6 +45,11 @@ $card-width: 340px;
 
 @mixin size-18-700 {
     font-size: 18px;
+    font-weight: 700;
+}
+
+@mixin size-14-700 {
+    font-size: 14px;
     font-weight: 700;
 }
 
