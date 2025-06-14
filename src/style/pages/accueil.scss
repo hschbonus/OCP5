@@ -10,7 +10,7 @@
 
 .card-wrapper {
     background-color: #F6F6F6;
-    height: 829px;
+    height: auto;
     width: 100%;
     @include variables.img-cut-desktop;
     display: grid;
