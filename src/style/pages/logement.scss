@@ -5,6 +5,7 @@
     @include variables.flex-between-center;
     display: flex;
     flex-direction: column;
+    gap: 50px;
 
 }
 
@@ -57,7 +58,6 @@
     @include variables.max1440-center;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
 }
 
 .logement-host {

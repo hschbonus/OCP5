@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import starActive from '../assets/star-active.png';
 import starInactive from '../assets/star-inactive.png';
 import { useEffect } from 'react';
+import Carousel from '../components/Carousel';
 
 
 function Logement({logements}) {
@@ -17,14 +18,16 @@ function Logement({logements}) {
 
   if (!logement) return null;
 
+  useEffect(() => {
+    document.title = "Kasa - Logement";
+  }
+  , []);
+
   const [firstName, lastName] = logement.host.name.split(' ');
 
   return (
     <div className='logement-wrapper'>
-      <div className='logement-carousel'>
-
-      </div>
-
+      <Carousel logements={logements} />
       <div className='logement-info1'>
         <div className='logement-info1a'>
           <h1>{logement.title}</h1>

@@ -23,6 +23,7 @@ function Accueil() {
       <div className="card-wrapper">
         {listeLogements.map((logement) => (
           <Link
+            key={logement.id}
             to={`/Logement/${logement.id}`}
             >
             <Card
@@ -32,8 +33,6 @@ function Accueil() {
             />
           </Link>
         ))}
-        
-
       </div>
 
     </section>
