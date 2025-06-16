@@ -3,12 +3,15 @@ import starActive from '../assets/star-active.png';
 import starInactive from '../assets/star-inactive.png';
 import { useEffect } from 'react';
 import Carousel from '../components/Carousel';
+import Collapse from '../components/Collapse';
 
 
 function Logement({logements}) {
   const { id } = useParams();
   const navigate = useNavigate();
   const logement = logements.find(logement => logement.id === id);
+  const description = logement ? logement.description : '';
+  const equipements = logement ? logement.equipments : [];
   
   useEffect(() => {
     if (!logement) {
@@ -49,7 +52,7 @@ function Logement({logements}) {
           <div className='logement-rating'>
             {Array.from({ length: 5 }, (_, index) => (
               index < logement.rating ? 
-              <img key={index} src = {starActive}/> 
+              <img key={index} src = {starActive}/>
               : 
               <img key={index} src={starInactive}/>
             ))}
@@ -57,14 +60,22 @@ function Logement({logements}) {
         </div>
       </div>
       <div className='logement-info2'>
-        <div className='logement-description'>
-          <p>Description</p>
-        </div>
-        <div className='logement-equipements'>
-          <p>Equipements</p>
+        <Collapse 
+          collapseTitle="Description" 
+          collapseContent={description} />
+        <Collapse 
+          collapseTitle="Équipements" 
+          collapseContent={
+            <ul className='logement-equipments'>
+              {equipements.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          }
+          />
         </div>
       </div>
-    </div>
+    
   )
 }
 
