@@ -10,12 +10,8 @@ header {
         a {
             @include variables.size-24-500;
             text-decoration: none;
-            &:visited {
-                color: #000;
-            }
+            color: #000;
         }
     }
-    a {
-        height: 100%;
-    }
 }
+

@@ -24,10 +24,8 @@ function Accueil() {
         {listeLogements.map((logement) => (
           <Link
             to={`/Logement/${logement.id}`}
-            key={logement.id}
             >
             <Card
-              // key={logement.id}
               cardTitle={logement.title}
               cardImg={logement.cover}
               id={logement.id}

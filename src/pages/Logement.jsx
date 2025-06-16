@@ -1,9 +1,23 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import starActive from '../assets/star-active.png';
+import starInactive from '../assets/star-inactive.png';
+import { useEffect } from 'react';
 
 
 function Logement({logements}) {
   const { id } = useParams();
+  const navigate = useNavigate();
   const logement = logements.find(logement => logement.id === id);
+  
+  useEffect(() => {
+    if (!logement) {
+      navigate(`/Error`);
+    }
+  }, [logement, navigate]);
+
+  if (!logement) return null;
+
+  const [firstName, lastName] = logement.host.name.split(' ');
 
   return (
     <div className='logement-wrapper'>
@@ -17,18 +31,24 @@ function Logement({logements}) {
           <p>{logement.location}</p>
           <div className='logement-tags'>
             {logement.tags.map((tag, index) => (
-              <span key={index} className='logement-tag'>{tag}</span>
+              <div key={index} className='logement-tag'>{tag}</div>
             ))}
           </div>
         </div>
         <div className='logement-info1b'>
           <div className='logement-host'>
-            <p className='logement-host-name'>{logement.host.name}</p>
-            <img className='logement-host-img' src={logement.host.picture} alt={logement.host.name} />
+            <div className='logement-host-name'>
+              <p>{firstName}</p>
+              <p>{lastName}</p>
+            </div>
+            <img src={logement.host.picture} alt={logement.host.name} />
           </div>
           <div className='logement-rating'>
             {Array.from({ length: 5 }, (_, index) => (
-              <span key={index} className={`star ${index < logement.rating ? 'filled' : ''}`}>★</span>
+              index < logement.rating ? 
+              <img key={index} src = {starActive}/> 
+              : 
+              <img key={index} src={starInactive}/>
             ))}
           </div>
         </div>
