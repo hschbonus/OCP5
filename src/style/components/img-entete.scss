@@ -24,7 +24,7 @@
     img {
         @include variables.img-cut-desktop;
         @include variables.img-shadow;
-        height: variables.$haut-img;
+        height: variables.$haut-img-desktop;
         z-index: 0;
 
     }
@@ -49,3 +49,22 @@
 
 }
 
+@media (max-width: 768px) {
+    .img-entete {
+        justify-content: left;
+
+
+        img {
+            @include variables.img-cut-mobile;
+            height: variables.$haut-img-mobile;
+        }
+
+        &::after {
+            border-radius: 10px;
+        }
+
+        h1 {
+            @include variables.size-24-700;
+        }
+    }
+}

@@ -5,7 +5,7 @@ function Card ({cardTitle, cardImg}) {
         <div className="card-content">
             <img 
                 src= {cardImg}
-                alt= ''
+                alt= {'Image de ' + cardTitle}
             />
             <h2>{cardTitle}</h2>
         </div>

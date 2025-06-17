@@ -2,9 +2,8 @@ $max-width-desktop: 1440px;
 $main-color: #FF6060;
 $secondary-color: #F6F6F6;
 $main-font: 'Montserrat', sans-serif;
-$haut-img: 223px;
-$card-height: 340px;
-$card-width: 340px;
+$haut-img-desktop: 223px;
+$haut-img-mobile: 111px;
 
 
 @mixin flex-between-center {
@@ -14,9 +13,15 @@ $card-width: 340px;
 }
 
 @mixin max1440-center {
-    width: 100vw;
+    width: 100%;
     max-width: $max-width-desktop;
     padding: 0 100px;
+    box-sizing: border-box;
+}
+
+@mixin mobile-center {
+    width: 100%;
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
@@ -60,10 +65,22 @@ $card-width: 340px;
     font-weight: 700;
 }
 
+@mixin size-10-700 {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
 @mixin size-18-400 {
     font-size: 18px;
     font-weight: 400;
 }
+
+@mixin size-24-700 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
 
 @mixin size-12-400 {
     font-size: 12px;
@@ -88,8 +105,13 @@ $card-width: 340px;
 }
 
 @mixin card-size-desktop {
-    width: $card-width;
-    height: $card-height;
+    width: 340px;
+    height: 340px;
     border-radius: 10px;
+}
+
+@mixin card-size-mobile {
+    border-radius: 10px;
+    max-height: 255px;
 
 }

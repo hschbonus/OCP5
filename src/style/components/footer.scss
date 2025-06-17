@@ -18,3 +18,15 @@ footer {
         @include variables.size-24-500;
     }
 }
+
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+        
+        p {
+            padding-top: 105px;
+            @include variables.size-12-500;
+            width: 100px;
+        }
+    }
+}

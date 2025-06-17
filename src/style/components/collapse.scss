@@ -54,7 +54,7 @@
             max-height: 100vh;
             transform: scaleY(1);
             opacity: 1;
-            padding: 20px 20px;       
+            padding: 20px 20px;
         }
     }
 
@@ -65,4 +65,20 @@
     }
 }
 
+@media (max-width: 768px) {
+    .collapse {
+        .collapse-title {
+            height: 30px;
+
+            .collapse-title-text {
+                @include variables.size-13-700;
+            }
+
+            .collapse-toggle {
+                scale: 0.7;
+            }
+
+        }
+    }
+}
 

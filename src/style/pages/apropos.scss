@@ -7,6 +7,21 @@
     align-items: center;
     @include variables.max1440-center;
     gap: 38px;
+
+    .collapse {
+        padding: 0 108.5px;
+    }
     
 }
 
+@media (max-width: 768px) {
+    .apropos {
+        @include variables.mobile-center;
+        gap: 19px;
+
+        .collapse {
+            padding: 0;
+        }
+    }
+    
+}

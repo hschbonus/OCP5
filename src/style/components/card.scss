@@ -3,7 +3,6 @@
 .card-content {
   @include variables.card-size-desktop;
   position: relative;
-  border-radius: 10px;
 
   &::after {
     content: '';
@@ -38,3 +37,17 @@
   }
 }
 
+@media (max-width: 768px) {
+  .card-content {
+    @include variables.card-size-mobile;
+    width: 100%;
+
+    img {
+      @include variables.card-size-mobile;
+      object-fit: cover;
+      width: 100%;
+      aspect-ratio: 10/1;
+    }
+  }
+  
+}
