@@ -19,6 +19,7 @@ function Carousel({ logements }) {
         <div className='carousel-controls'>
             <div className='carousel-buttons'>
             <FontAwesomeIcon
+                style={{ display: logement.pictures.length === 1 ? 'none' : ''}}
                 icon={faChevronLeft}
                 size="xl"
                 onClick={() =>
@@ -26,9 +27,13 @@ function Carousel({ logements }) {
                 }
             />
             </div>
-            <span className='carousel-counter'>{currentIndex + 1}/{pictures.length}</span>
+            <span 
+                className='carousel-counter'
+                style={{ display: logement.pictures.length === 1 ? 'none' : ''}}>
+                    {currentIndex + 1}/{pictures.length}</span>
             <div className='carousel-buttons'>
             <FontAwesomeIcon
+                style={{ display: logement.pictures.length === 1 ? 'none' : ''}}
                 icon={faChevronRight}
                 size="xl"
                 onClick={() => setCurrentIndex((currentIndex + 1) % pictures.length)}

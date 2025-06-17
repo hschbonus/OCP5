@@ -20,7 +20,11 @@ function Collapse ({collapseTitle, collapseContent}) {
                     />
                 </div>
             </div>
-            {isOpen && <div className='collapse-content'>{collapseContent}</div>}
+            <div 
+                className={`collapse-content ${isOpen ? 'open' : ''}`}
+                >
+                {collapseContent}
+            </div>
         </div>
     );
 }

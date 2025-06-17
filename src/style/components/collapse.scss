@@ -36,14 +36,25 @@
     .collapse-content {
         background-color: rgba(variables.$secondary-color, 0.45);
         @include variables.size-18-400;
-        padding: 30px 20px 20px 20px;
-        margin-top: -10px;
         color: black;
         font-size: 16px;
         line-height: 24px;
         font-weight: 400;
-        overflow: hidden;
         z-index: -1;
+        max-height: 0;
+        overflow: hidden;
+        transform: scaleY(0);
+        transform-origin: top;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        opacity: 0;
+        transition: all 0.3s ease;
+
+        &.open {
+            max-height: 100vh;
+            transform: scaleY(1);
+            opacity: 1;        
+        }
     }
 
     ul {
@@ -52,3 +63,5 @@
         margin: 0;
     }
 }
+
+
