@@ -67,6 +67,11 @@
 
 @media (max-width: 768px) {
     .collapse {
+        
+        .collapse-content {
+            @include variables.size-12-400;
+        }
+
         .collapse-title {
             height: 30px;
 

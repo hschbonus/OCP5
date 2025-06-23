@@ -76,6 +76,12 @@ $haut-img-mobile: 111px;
     font-weight: 400;
 }
 
+@mixin size-12-400 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
 @mixin size-24-700 {
     font-size: 24px;
     font-weight: 700;
