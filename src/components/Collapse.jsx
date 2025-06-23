@@ -11,7 +11,7 @@ function Collapse ({collapseTitle, collapseContent}) {
         <div className='collapse'>
             <div className='collapse-title'>
                 <div className="collapse-title-text">{collapseTitle}</div>
-                <div className='collapse-toggle' onClick={() => setIsOpen(!isOpen)}>
+                <div className='collapse-toggle'>
                     <FontAwesomeIcon
                         icon={faChevronUp}
                         size="xl"
